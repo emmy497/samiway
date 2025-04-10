@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import boy from "../../assets/images/boy.png";
+import woman from "../../assets/images/woman.png";
+import { SlideRight } from "../../utility/animation";
 import "../../App.css";
 
 function Home() {
@@ -40,66 +42,94 @@ function Home() {
     //   </div>
     // </div>
 
-    <section className="px-[5%] md:mt-0 overflow-x-hidden">
-      <div class="container grid grid-cols-1 md:grid-cols-2 min-h-[650px] relative">
-        <div class="flex flex-col pt-[40px] md:pt-[150px]   text-center md:text-start">
-      <motion.h1 
-      initial={{  opacity: 0 ,y: 100}}    // Start 100px below, invisible
-      whileInView={{ opacity: 1 ,y: 0 }}      // Animate to position
-      transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-3xl md:text-5xl font-bold  mb-6">
-            <span className="text-[#a569bd] font-bold ">SAMIWAY</span> <br /> Educational Limited
+    <section className="px-[4%] pt-[4%] md:pt-[7%] md:px-[7%] z-10  md:mb-0 mt-10 md:mt-0">
+      <div class=" grid grid-cols-1 md:grid-cols-2  relative">
+        <div class="flex flex-col items-center md:items-start  md:pb-[200px] text-center md:text-start pt-[40px] ">
+          {/* <motion.p
+            variants={SlideRight(0.4)}
+            initial="hidden"
+            animate="visible"
+            className="font-semibold mb-4 text-purple-900"
+          >
+            100% Satisfaction Guarantee
+          </motion.p> */}
+
+          <motion.h1
+            variants={SlideRight(0.6)}
+            initial="hidden"
+            animate="visible"
+            className="text-5xl md:text-[80px] font-bold  mb-6"
+          >
+            Find Your <br />
+            <span className="text-[#a569bd] font-bold "> Perfect </span>
+            Tutor
           </motion.h1>
-          <motion.p 
-                initial={{  opacity: 0 ,y: 100}}    // Start 100px below, invisible
-                whileInView={{ opacity: 1 ,y: 0 }}      // Animate to position
-                transition={{ duration: 0.6, ease: "easeOut" }}
-          className="font-semibold mb-4">Making you relevant to the world.</motion.p>
-          <motion.p 
-                initial={{  opacity: 0 ,y: 100}}    // Start 100px below, invisible
-                whileInView={{ opacity: 1 ,y: 0 }}      // Animate to position
-                transition={{ duration: 0.6, ease: "easeOut" }}>
-            Holistic Learning for Children & Adults
-            <br className="hidden md:block" /> Teaching reading, writing, public
-            speaking, <br className="hidden md:block" /> and core subjects to
-            improve confidence and knowledge.
+
+          {/* <motion.p
+            variants={SlideRight(0.6)}
+            initial="hidden"
+            animate="visible"
+            className="font-semibold mb-4"
+          >
+            Making you relevant to the world.
+          </motion.p> */}
+          <motion.p
+            variants={SlideRight(0.8)}
+            initial="hidden"
+            animate="visible"
+            className="text-slate-600 text-[12px] md:text-[19px] mb-4  "
+          >
+            Holistic Learning for Children & Adults Teaching reading,{" "}
+            <br className="hidden md:block" />
+            writing, public speaking, and core subjects to improve{" "}
+            <br className="hidden md:block" />
+            confidence and knowledge.
           </motion.p>
 
+          {/* done */}
+
           {/* Get in Touch  */}
-          <motion.div
-                initial={{  opacity: 0 ,y: 100}}    // Start 100px below, invisible
-                whileInView={{ opacity: 1 ,y: 0 }}      // Animate to position
-                transition={{ duration: 0.6, ease: "easeOut" }}
+          {/* <motion.div
+            variants={SlideRight(0.8)}
+            initial="hidden"
+            animate="visible"
             className="relative bg-white flex md:ml-0 mx-auto items-center
-           p-4 shadow-xl justify-between w-[100%] h-[60px] mt-8"
+           p-4 shadow-xl justify-between md:w-[100%] w-[80%] h-[45px] md:h-[60px] mt-8"
           >
             <input
               className="w-full bg-transparent placeholder:text-slate-400 text-slate-700  outline-none "
               placeholder="Email"
               type="text"
             />
-            <div className="bg-[#a569bd] h-full flex items-center absolute right-0 p-4 text-white
-             cursor-pointer hover:bg-[#9d69bd]">
+            <div
+              className="bg-[#a569bd] h-full flex items-center absolute right-0 p-4 text-white
+             cursor-pointer hover:bg-[#9d69bd]"
+            >
               Get in touch
             </div>
+          </motion.div> */}
+          <motion.div
+            variants={SlideRight(0.6)}
+            initial="hidden"
+            animate="visible"
+            className="bg-[#a569bd]  rounded-xl flex justify-center items-center p-4  md:w-[150px] text-white cursor-pointer hover:bg-[#9d69bd]"
+          >
+            Get in touch
           </motion.div>
         </div>
-        
-
-
 
         {/* Hero Image */}
         <motion.div
           class="flex justify-center items-center"
-          initial={{ opacity: 0.5, scale: 0 }}
+          initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="relative top-[-20%]  right-[-20%]  md:right-[-60px] md:top-[-100px]"
+          transition={{ type: "spring", stiffness: 100, delay: 0.6 }}
+          className="relative top-[10px] md:absolute md:right-[-50px] right-[-20%]    md:top-[-70px] z-10"
         >
           <img
-            src={boy}
+            src={woman}
             alt=""
-            class="w-[250px] md:w-[500px]  drop-shadow"
+            class="w-[250px] md:w-[550px]  drop-shadow object-fill"
           />
         </motion.div>
 

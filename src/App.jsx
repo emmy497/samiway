@@ -9,13 +9,13 @@ import Footer from "./components/Footer/Footer"
 
 function App() {
   return (
-    <div className="w-full">
+    <main className="overflow-x-hidden">
       <Navbar />
       <Home/>
       <About/>
       <Services/>
       <Footer/>
-    </div>
+    </main>
 
     
   );

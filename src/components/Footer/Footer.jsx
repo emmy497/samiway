@@ -11,10 +11,10 @@ function Footer() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="text-white md:ml-[90px] mr-[90px] "
       >
-        <h1 className="text-3xl md:text-3xl  font-semibold ">SAMIWAY</h1>
-        <p>Making you relevant to the world</p>
+        <h1 className="text-2xl md:text-3xl  font-semibold ">SAMIWAY</h1>
+        <p className="text-[14px]">Making you relevant to the world</p>
 
-        <p className="mb-4">
+        <p className="mb-4 text-[14px]">
           Holistic Learning for Children & Adults
           <br className="hidden md:block" /> Teaching reading, writing, public
           speaking, <br className="hidden md:block " /> and core subjects to
@@ -23,10 +23,10 @@ function Footer() {
 
         {/* Icos Section */}
         <div className="icons-div flex   ">
-          <FaInstagram className="mr-4" size={25} />
-          <FaTwitter className="mr-4" size={25} />
-          <FaTiktok className="mr-4" size={25} />
-          <FaFacebookF size={25} />
+          <FaInstagram className="mr-4" size={20} />
+          <FaTwitter className="mr-4" size={20} />
+          <FaTiktok className="mr-4" size={20} />
+          <FaFacebookF size={20} />
         </div>
       </motion.div>
 
@@ -40,26 +40,26 @@ function Footer() {
           Contact us
         </h1>
         <div className="flex flex-col">
-          <div className="text-white font-semibold mb-4">
+          <div className="text-white font-semibold mb-4 text-[14px]">
             Have questions, comments or just want to say hello:
           </div>
           <div className="flex items-center mb-2">
             <div className="mr-2">
               <FaEnvelope />
             </div>
-            <h1>samiwayconsult@gmail.com</h1>
+            <h1 className="text-[14px]">samiwayconsult@gmail.com</h1>
           </div>
           <div className="flex  items-center mb-2">
             <div className="mr-2">
               <FaMapMarkerAlt />
             </div>
-          <div>6b, Adams adepju close, ijaiye, Lagos</div>
+          <div className="text-[14px]">6b, Adams adepju close, ijaiye, Lagos</div>
           </div>
           <div className="flex">
             <div className="mr-2">
               <FaPhone />
             </div>
-            <div>+234 7082781079 , +234 8146354607</div>
+            <div className="text-[14px]">+234 7082781079 , +234 8146354607</div>
           </div>
         </div>
       </motion.div>

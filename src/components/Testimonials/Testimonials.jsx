@@ -48,7 +48,7 @@ const Testimonials = () => {
       <div className="container">
         {/* header section */}
         <div className="text-left mb-4  space-y-2 mr-auto w-full text-center">
-          <h1 className="text-3xl font-bold text-center ">
+          <h1 className="text-[20px] md:text-3xl font-bold text-center ">
             What Are Costumers Saying About Us
           </h1>
         </div>

@@ -3,15 +3,29 @@ import adult from "../../assets/images/adult.png"
 import dictionary from  "../../assets/images/dictionary.png"
 import exam from "../../assets/images/exam.png"
 import tutoring from "../../assets/images/tutoring.png"
+import { delay } from "motion"
+import { SlideLeft } from "../../utility/animation"
+
+
+import { FaBook } from "react-icons/fa6";
+import { FaPerson } from "react-icons/fa6";
+import { RiParentFill } from "react-icons/ri";
+import { FaBookOpenReader } from "react-icons/fa6";
+
+
+
+
 
 
 
 function Card() {
-  const CardItems = [
+  const cardData = [
     {
-      cardTitle: "Literacy and Language Training",
+      id: 1,
+      title: "Literacy and Language Training",
       paragraph: "just some random paragrap stuff",
-      icon: dictionary
+      icon: <FaBook />,
+      delay: 0.6
     },
 
     // {
@@ -20,22 +34,31 @@ function Card() {
     //     "Gain confidence in expressing yourself in social and professional settings.",
     // },
 
-    { cardTitle: " Academic Tutoring (Children & Adults)",
+    { 
+      id: 2,
+      title: " Academic Tutoring (Children & Adults)",
        paragraph: "Get support in subjects like English, math, science, and more." ,
-       icon: tutoring
+       icon: <RiParentFill size="30px" />,
+       delay: 0.6
     },
-    { cardTitle: "Adult Learning Programs", 
+    { 
+      id: 3,
+      title: "Adult Learning Programs", 
       paragraph: "Overcome learning barriers and develop skills for career and personal growth." ,
-      icon: adult
+      icon: <FaPerson size="30px"/>,
+      delay: 0.6
     },
-    { cardTitle: "Exam Preparation", 
+    {
+      id: 4,
+      title: "Exam Preparation", 
       paragraph: "Prepare for school and professional exams with expert guidance." ,
-      icon: exam
+      icon: <FaBookOpenReader  size="30px"/>,
+      delay: 0.6
     },
   ];
   return (
     <>
-      {CardItems.map(({ cardTitle, paragraph , icon}) => (
+      {/* {CardItems.map(({ cardTitle, paragraph , icon}) => (
         <motion.div
         initial={{  opacity: 0 ,y: 100}}    // Start 100px below, invisible
         whileInView={{ opacity: 1 ,y: 0 }}      // Animate to position
@@ -51,7 +74,23 @@ function Card() {
           </div>
          
         </motion.div>
-      ))}
+      ))} */}
+        <div className="cards grid grid-cols-1 md:grid-cols-2 gap-4 md:mb-14 px-[5%]">
+                  {cardData.map(({ paragraph, title, icon, id, delay }) => (
+                    <motion.div
+                      variants={SlideLeft(delay)}
+                      initial="hidden"
+                      whileInView="visible"
+                     className="bg-white "
+                    >
+                      <div className=" p-4 shadow-2xl rounded-xl min-h-[130px] min-w-[400px] " key={id}>
+                        <div className="mb-2 " >{icon}</div>
+                        <div className=" font-semibold text-[14px]">{title}</div>
+                        <p className="text-[12px]">{paragraph}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
     </>
   );
 }

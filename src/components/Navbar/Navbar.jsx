@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
 import { FaX, FaBars } from "react-icons/fa6";
 import ResponsiveMenu from "./ResponsiveMenu";
+import { FaGraduationCap } from "react-icons/fa6";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,9 +36,9 @@ function Navbar() {
   ];
 
   return (
-    <div className="w-full bg-white md:transparent  top-0 left-0 right-0  ">
+    <div className="w-full bg-white md:transparent  top-0 left-0 right-0 z-50 ">
       <nav
-        className="px-[5%] pt-[20px]  md:pt-[40px]"
+        className="px-[4%] pt-[20px]  md:pt-[40px] md:px-[7%]"
       >
         <div className="flex justify-between items-center text-base gap-8">
           <div className="font-bold">
