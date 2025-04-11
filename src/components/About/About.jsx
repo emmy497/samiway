@@ -57,11 +57,12 @@ function About() {
                 variants={SlideLeft(delay)}
                 initial="hidden"
                 whileInView="visible"
-                className="bg-white "
+                className="bg-white  "
+                key={id}
               >
                 <div
-                  className=" p-4 shadow-2xl rounded-xl min-h-[130px] "
-                  key={id}
+                  className=" p-4 shadow-2xl rounded-xl min-h-[130px]   "
+                 
                 >
                   <div className="mb-2 ">{icon}</div>
                   <div className=" font-semibold text-[14px]">{title}</div>
@@ -158,7 +159,7 @@ function About() {
           whileInView="visible"
           className="bg-white "
         >
-          <div className=" p-4 shadow-2xl rounded-xl min-h-[130px] min-w-[400px] ">
+          <div className=" p-4 shadow-2xl rounded-xl min-h-[130px] md:min-w-[400px] md:max-w-[500px]">
             <div className=" font-semibold text-[20px]">Our Mission</div>
             <p className="text-[12px]">
               {" "}
@@ -175,7 +176,7 @@ function About() {
           whileInView="visible"
           className="bg-white "
         >
-          <div className=" p-4 shadow-2xl rounded-xl min-h-[130px] min-w-[400px] ">
+          <div className=" p-4 shadow-2xl rounded-xl min-h-[130px] md:min-w-[400px] md:max-w-[500px]">
             <div className=" font-semibold text-[20px]">Our Vision</div>
             <p className="text-[12px]">
               {" "}

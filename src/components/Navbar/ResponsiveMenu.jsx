@@ -25,7 +25,7 @@ function ResponsiveMenu({ open, toggleMenu}) {
               <a
                 key={path}
                 href={path}
-                className="block text-white text-gray-900  first:font-medium"
+                className="block text-white first:font-medium text-[14px]"
                 onClick={toggleMenu}
               >
                 {link}

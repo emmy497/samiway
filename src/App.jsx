@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer"
 
 function App() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-hidden">     
       <Navbar />
       <Home/>
       <About/>
