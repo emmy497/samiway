@@ -124,7 +124,7 @@ function Home() {
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 100, delay: 0.6 }}
-          className="relative top-[10px] md:absolute md:right-[-50px] right-[-20%]    md:top-[-70px] z-10"
+          className="relative top-[10px] md:absolute md:right-[-50px] right-[15px] mx-auto md:top-[-70px] z-10"
         >
           <img
             src={woman}
