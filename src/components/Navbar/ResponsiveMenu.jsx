@@ -8,6 +8,8 @@ function ResponsiveMenu({ open, toggleMenu}) {
     { link: "Home", path: "/#home" },
     { link: "About", path: "/#about" },
     { link: "Services", path: "/#services" },
+    { link: "products", path: "/products" },
+
   ];
 
   return (

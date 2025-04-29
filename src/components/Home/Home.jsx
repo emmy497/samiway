@@ -3,6 +3,7 @@ import boy from "../../assets/images/boy.png";
 import woman from "../../assets/images/woman.png";
 import { SlideRight } from "../../utility/animation";
 import "../../App.css";
+import {Link} from "react-router-dom"
 
 function Home() {
   return (
@@ -114,7 +115,7 @@ function Home() {
             animate="visible"
             className="bg-[#a569bd]  rounded-xl flex justify-center items-center p-4  md:w-[150px] text-white cursor-pointer hover:bg-[#9d69bd]"
           >
-            Get in touch
+           <Link to="#services">Get in touch</Link> 
           </motion.div>
         </div>
 

@@ -21,7 +21,7 @@ function Products() {
       id: 1,
       imageUrl: tenses,
       description: "TENSES video courses 1, 2 and 3  (It's a 3 in 1 video)",
-      price: "#3000",
+      price: "#5,000",
       delay: 0.6,
     },
     {
@@ -29,21 +29,21 @@ function Products() {
       imageUrl: sales,
       description:
         "50 Common Errors in English that can cause you shame in public.  (50 Common English Mistakes and Their Corrections)",
-      price: "#3000",
+      price: "#3,000",
       delay: 0.6,
     },
     {
       id: 3,
       imageUrl: confusables,
       description: "Compilation of Confusables  ",
-      price: "#3000",
+      price: "#3,000",
       delay: 0.6,
     },
     {
       id: 4,
       imageUrl: sales,
-      description: "this is the second image",
-      price: "#3000",
+      description: "How to spell and write with ease (Spelling Handout + video lecture on spelling and writing)",
+      price: "#10,000",
       delay: 0.6,
     },
   ];
