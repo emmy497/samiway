@@ -1,0 +1,85 @@
+import { div } from "motion/react-client";
+import Navbar from "../Navbar/Navbar";
+import tenses from "../../assets/images/tenses.jpeg";
+import mistakes from "../../assets/images/mistakes.jpeg";
+import sales from "../../assets/images/sales.jpeg";
+import confusables from "../../assets/images/confusables.jpeg";
+import Modal from "../../components/Modal/Modal";
+import { useState } from "react";
+import { SlideLeft } from "../../utility/animation";
+import { motion } from "framer-motion";
+
+function products() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleCloseModal = () => {
+    setIsModalOpen((prev) => !prev);
+  };
+
+  const materials = [
+    {
+      id: 1,
+      imageUrl: tenses,
+      description: "TENSES video courses 1, 2 and 3  (It's a 3 in 1 video)",
+      price: "#3000",
+      delay: 0.6,
+    },
+    {
+      id: 2,
+      imageUrl: sales,
+      description:
+        "50 Common Errors in English that can cause you shame in public.  (50 Common English Mistakes and Their Corrections)",
+      price: "#3000",
+      delay: 0.6,
+    },
+    {
+      id: 3,
+      imageUrl: confusables,
+      description: "Compilation of Confusables  ",
+      price: "#3000",
+      delay: 0.6,
+    },
+    {
+      id: 4,
+      imageUrl: sales,
+      description: "this is the second image",
+      price: "#3000",
+      delay: 0.6,
+    },
+  ];
+  return (
+    <div className="relative w-[100%] ">
+      <Navbar />
+      <div className="cards-container grid grid-cols-1 md:grid-cols-2 gap-6 p-[7%] px-[5%] z-20">
+        {materials.map((material) => (
+          <motion.div
+            whileHover={{ scale: 1.01 }} 
+            transition={{ type: "spring", stiffness: 300 }}
+            variants={SlideLeft(material.delay)}
+            initial="hidden"
+            whileInView="visible"
+            key={material.id}
+            onClick={() => setIsModalOpen(true)}
+            className="flex flex-row shadow-2xl p-4 text-[14px] rounded-2xl cursor-pointer hover:scale-105"
+          >
+            <div className="w-[200px] h-[100px] mr-6">
+              <img
+                className="w-full h-full object-cover"
+                src={material.imageUrl}
+                alt=""
+              />
+            </div>
+            <div className="">
+              <div className="mb-6"> {material.description}</div>
+              <div className="font-bold"> {material.price}</div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      <Modal isModalOpen={isModalOpen} handleClose={handleCloseModal} />
+    </div>
+  );
+}
+
+export default products;

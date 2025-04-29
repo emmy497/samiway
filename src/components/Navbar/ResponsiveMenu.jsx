@@ -5,9 +5,9 @@ import NavItem from "./NavItem";
 
 function ResponsiveMenu({ open, toggleMenu}) {
   const navItems = [
-    { link: "Home", path: "#home" },
-    { link: "About", path: "#about" },
-    { link: "Services", path: "#services" },
+    { link: "Home", path: "/#home" },
+    { link: "About", path: "/#about" },
+    { link: "Services", path: "/#services" },
   ];
 
   return (

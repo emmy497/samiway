@@ -83,8 +83,8 @@ export const ProductsData = [
     id: 7,
     category: "Yoga",
     image: Image3,
-    title: "Yoga Mat",
     info: "info",
+    title: "Yoga Mat",
     price: "$100",
   },
 ];
