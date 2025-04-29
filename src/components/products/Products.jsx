@@ -9,7 +9,7 @@ import { useState } from "react";
 import { SlideLeft } from "../../utility/animation";
 import { motion } from "framer-motion";
 
-function products() {
+function Products() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCloseModal = () => {
@@ -82,4 +82,4 @@ function products() {
   );
 }
 
-export default products;
+export default Products
