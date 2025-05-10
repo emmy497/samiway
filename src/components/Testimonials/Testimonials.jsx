@@ -1,11 +1,48 @@
 import React from "react";
-import { TestimonialsData } from "../../mockData/data";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaPerson } from "react-icons/fa6";
+import { IoPerson } from "react-icons/io5";
 
 
 const Testimonials = () => {
+  
+ const TestimonialsData = [
+  {
+    id: 1,
+    name: "Mr Babalola",
+    occupation: " Adult Learner",
+    text: "Before joining Sami Way, I struggled to read fluently. Now, I can read and write with confidence! Thank you for making learning so easy and fun!",
+    img: <IoPerson size="30px"/>,
+    delay: 0.2,
+  },
+
+  {
+    id: 2,
+    name: "Mrs. Adekunle",
+    occupation: "parent",
+    text: "My child used to find it hard to read, but with Sami Way's guidance, she now reads and writes confidently. I highly recommend their programs!",
+    img: <IoPerson size="30px"/>,
+    delay: 0.5,
+  },
+  {
+    id: 3,
+    name: " Emmanuel ",
+    occupation: "Entrepreneur",
+    text: "As a business owner, I needed to improve my communication skills. Thanks to Sami Way, I can now speak clearly and professionally with my customers!",
+    img: <IoPerson size="30px"/>,
+    delay: 0.8,
+  },
+  // {
+  //   id: 5,
+  //   name: "Ariana",
+  //   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+  //   img: "https://picsum.photos/103/103",
+  //   delay: 1.1,
+  // },
+];
+
   const setting = {
     dots: true,
     arrow: false,
@@ -54,7 +91,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials Cards */}
-        <div>
+        <div className="items-center">
           <Slider {...setting}>
             {TestimonialsData.map((data) => (
               <div key={data.id} className="my-6  ">
@@ -62,11 +99,12 @@ const Testimonials = () => {
                  min-h-[300px]">
                   {/* upper section */}
                   <div className="flex justify-start items-center gap-5 ">
-                    <img
+                    {/* <img
                       src={data.img}
                       alt=""
                       className="rounded-full w-16 h-16"
-                    />
+                    /> */}
+                    <div>{data.img}</div>
                     <div>
                       <p className="text-xl font-bold text-black/80">
                         {data.name}

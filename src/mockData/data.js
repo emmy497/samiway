@@ -3,6 +3,10 @@ import Image2 from "../assets/tabs/2.png";
 import Image3 from "../assets/tabs/3.png";
 import Image4 from "../assets/tabs/4.png";
 
+import { IoMdPerson } from "react-icons/io";
+import { FaPerson } from "react-icons/fa6";
+
+
 export const NavbarMenu = [
   {
     id: 1,
@@ -89,36 +93,3 @@ export const ProductsData = [
   },
 ];
 
-export const TestimonialsData = [
-  {
-    id: 1,
-    name: "Mr Babalola",
-    occupation: " Adult Learner",
-    text: "Before joining Sami Way, I struggled to read fluently. Now, I can read and write with confidence! Thank you for making learning so easy and fun!",
-    img: "https://picsum.photos/101/101",
-    delay: 0.2,
-  },
-  {
-    id: 2,
-    name: "Mrs. Adekunle",
-    occupation: "parent",
-    text: "My child used to find it hard to read, but with Sami Way's guidance, she now reads and writes confidently. I highly recommend their programs!",
-    img: "https://picsum.photos/102/102",
-    delay: 0.5,
-  },
-  {
-    id: 3,
-    name: " Emmanuel ",
-    occupation: "Entrepreneur",
-    text: "As a business owner, I needed to improve my communication skills. Thanks to Sami Way, I can now speak clearly and professionally with my customers!",
-    img: "https://picsum.photos/104/104",
-    delay: 0.8,
-  },
-  // {
-  //   id: 5,
-  //   name: "Ariana",
-  //   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-  //   img: "https://picsum.photos/103/103",
-  //   delay: 1.1,
-  // },
-];

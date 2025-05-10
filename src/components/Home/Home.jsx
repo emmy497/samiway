@@ -80,7 +80,7 @@ function Home() {
             animate="visible"
             className="text-slate-600 text-[12px] md:text-[19px] mb-4  "
           >
-            Holistic Learning for Children & Adults Teaching reading,{" "}
+            Complete Learning for Children & Adults Teaching reading,{" "}
             <br className="hidden md:block" />
             writing, public speaking, and core subjects to improve{" "}
             <br className="hidden md:block" />

@@ -16,7 +16,7 @@ function Card() {
     {
       id: 1,
       title: "Literacy and Language Training",
-      paragraph: "just some random paragrap stuff",
+      paragraph: "Build strong reading, writing, and communication skills to thrive in everyday life and expand future opportunities.",
       icon: <FaBook size="30px" />,
       delay: 0.6,
     },
@@ -84,8 +84,8 @@ function Card() {
               key={id}
             >
               <div className="mb-2 ">{icon}</div>
-              <div className=" font-semibold text-[14px]">{title}</div>
-              <p className="text-[12px]">{paragraph}</p>
+              <div className=" font-semibold text-[18px]">{title}</div>
+              <p className="text-[14px]">{paragraph}</p>
             </div>
           </motion.div>
         ))}

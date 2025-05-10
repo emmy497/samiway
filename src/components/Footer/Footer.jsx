@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
-import { FaInstagram, FaTwitter, FaTiktok, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaTiktok, FaFacebookF ,} from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 function Footer() {
   return (
@@ -23,10 +26,11 @@ function Footer() {
 
         {/* Icos Section */}
         <div className="icons-div flex   ">
-          <FaInstagram className="mr-4" size={20} />
-          <FaTwitter className="mr-4" size={20} />
-          <FaTiktok className="mr-4" size={20} />
-          <FaFacebookF size={20} />
+          {/* <FaInstagram className="mr-4" size={20} />
+          <FaTwitter className="mr-4" size={20} /> */}
+          <Link to="https://www.tiktok.com/@adeolaashamo?_t=ZM-8u1tY6qsP03&_r=1"><FaTiktok className="mr-4" size={20} /></Link>
+          <Link to="https://www.youtube.com/@samiwayconsult"><FaYoutube size={20} className="mr-4" /></Link>
+          <Link to=""><FaFacebookF size={20} /></Link>
         </div>
       </motion.div>
 
