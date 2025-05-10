@@ -5,12 +5,25 @@ import mistakes from "../../assets/images/mistakes.jpeg";
 import sales from "../../assets/images/sales.jpeg";
 import confusables from "../../assets/images/confusables.jpeg";
 import Modal from "../../components/Modal/Modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SlideLeft } from "../../utility/animation";
 import { motion } from "framer-motion";
+import Spinner from "../Spinner/Spinner";
+
 
 function Products() {
+  const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (loading) return <Spinner />;
 
   const handleCloseModal = () => {
     setIsModalOpen((prev) => !prev);
@@ -42,7 +55,8 @@ function Products() {
     {
       id: 4,
       imageUrl: sales,
-      description: "How to spell and write with ease (Spelling Handout + video lecture on spelling and writing)",
+      description:
+        "How to spell and write with ease (Spelling Handout + video lecture on spelling and writing)",
       price: "#10,000",
       delay: 0.6,
     },
@@ -53,14 +67,14 @@ function Products() {
       <div className="cards-container grid grid-cols-1 md:grid-cols-2 gap-6 p-[7%] px-[5%] z-20">
         {materials.map((material) => (
           <motion.div
-            whileHover={{ scale: 1.01 }} 
+            whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 300 }}
             variants={SlideLeft(material.delay)}
             initial="hidden"
             whileInView="visible"
             key={material.id}
             onClick={() => setIsModalOpen(true)}
-            className="flex flex-row shadow-2xl p-4 text-[14px] rounded-2xl cursor-pointer hover:scale-105"
+            className="flex flex-row shadow-2xl p-4 text-[14px] rounded-2xl cursor-pointer "
           >
             <div className="w-[200px] h-[100px] mr-6">
               <img
@@ -82,4 +96,4 @@ function Products() {
   );
 }
 
-export default Products
+export default Products;

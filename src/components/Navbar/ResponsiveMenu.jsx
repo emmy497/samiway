@@ -2,6 +2,7 @@ import React from "react";
 // import { motion } from "motion/react"
 import { AnimatePresence, motion } from "framer-motion";
 import NavItem from "./NavItem";
+import { Link } from "react-router-dom";
 
 function ResponsiveMenu({ open, toggleMenu}) {
   const navItems = [
