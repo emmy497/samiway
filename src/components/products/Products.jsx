@@ -4,14 +4,14 @@ import tenses from "../../assets/images/tenses.jpeg";
 import mistakes from "../../assets/images/mistakes.jpeg";
 import sales from "../../assets/images/sales.jpeg";
 import confusables from "../../assets/images/confusables.jpeg";
-import Modal from "../../components/Modal/Modal";
+import Modal from "../Modal/Modal";
 import { useState, useEffect } from "react";
 import { SlideLeft } from "../../utility/animation";
 import { motion } from "framer-motion";
 import Spinner from "../Spinner/Spinner";
 
 
-function Products() {
+function products() {
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -96,4 +96,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default products;
