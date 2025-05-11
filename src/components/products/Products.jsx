@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import Spinner from "../Spinner/Spinner";
 
 
-function products() {
+function Products() {
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -96,4 +96,4 @@ function products() {
   );
 }
 
-export default products;
+export default Products;
